@@ -1,0 +1,1316 @@
+/*
+Google Fonts
+___________________________________________________
+*/
+@font-face {
+    font-family: juliusOne;
+    src: url('fonts/JuliusSansOne-Regular.eot?') format('eot'), url('fonts/JuliusSansOne-Regular.woff') format('woff'), url('fonts/JuliusSansOne-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: raleway;
+    src: url('fonts/Raleway-Regular.eot?') format('eot'), url('fonts/Raleway-Regular.woff') format('woff'), url('fonts/Raleway-Regular.ttf') format('truetype');
+}
+/*
+Font Variables
+_______________________________________________
+*/
+$headerFont: juliusOne, Helvetica Neue;
+$bodyFont: raleway, Garamond;
+/*
+Color Variables
+*/
+$navBackgroundColor: #1f1f1f;
+$navBoxShadow: rgba(31,31,31,.8);
+$navHoverOpenActiveColor: #43c0f6;
+$primaryColor: #43c0f6;
+/*
+Wordpress CSS
+___________________________________________________
+*/
+@import 'wordpress.scss';
+/*
+Mixins
+___________________________________________________
+*/
+
+@import 'mixins.scss';
+
+
+body {
+  background-color: #e6e6e6;
+}
+
+/* specific targeted CSS */
+
+#about {
+  padding-left: 0px;
+  padding-right: 0px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 400px;
+}
+
+#load {
+  width: 200px;
+  font-family: $headerFont;
+  color: white;
+  background-color: #36DBCA;
+  border-color: transparent;
+}
+
+.title-h1 {
+
+
+  h1 {
+    font-family: $bodyFont;
+    background-color: rgba(31,31,31,.9);
+    border-top: 4px solid black;
+    border-bottom: 4px solid black;
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+    color: #f1f1f1;
+  }
+}
+
+.dashicons-format-quote:nth-child(2) {
+  transform: rotateY( 180deg );
+}
+
+@media (max-width: 767px){
+  .title-h1 {
+    h1 {
+      font-size: 31px;
+    }
+  }
+}
+
+/*
+Navigation Header Nav
+_____________________________________________
+*/
+
+.navbar-default {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-color: $navBackgroundColor;
+  margin-bottom: 0px;
+  border-radius: 0px;
+  border-color: transparent;
+  box-shadow: 0px 5px 5px $navBoxShadow;
+  
+  .navbar-brand {
+    color: $primaryColor;
+  }
+  
+  .navbar-nav {
+    li {
+      a {
+        font-family: $headerFont;
+        color: #fff;
+        &:hover,
+        &:focus {
+          color: $navHoverOpenActiveColor;
+        }
+      }
+      .dropdown-menu {
+        li {
+          a {
+            color: #1f1f1f !important;
+            opacity: .8;
+            &:hover,
+            &:focus {
+              color: $navHoverOpenActiveColor !important;
+              opacity: 1;
+            }
+          }
+        }
+        .active {
+          a {
+          color: $navHoverOpenActiveColor !important;
+          }
+        }
+      }
+    }
+    .open {
+      a {
+        color: $navHoverOpenActiveColor;
+        opacity: 8;
+        background-color: transparent;
+        &:hover,
+        &:focus {
+          color: $navHoverOpenActiveColor;
+          opacity: 1;
+        }
+      }
+    }
+    .active {
+      a {
+        color: $navHoverOpenActiveColor !important;
+        background-color: transparent !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px){
+  .navbar-default {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  .navbar-nav .open .dropdown-menu {
+    background-color: #fff !important;
+    border-radius: 0px;
+  }
+  .caret {
+    float: right;
+    margin-top: 8px;
+  }
+}
+
+/* 
+Collapse Button Animation
+________________________________________________
+*/
+
+.navbar-toggle {
+  border: none;
+  background: transparent !important;
+
+  &:hover {
+    background: transparent !important;
+  }
+
+  .icon-bar {
+    width: 22px;
+    transition: all 0.2s;
+  }
+  .top-bar {
+    transform: rotate(45deg);
+    transform-origin: 10% 10%;
+  }
+  .middle-bar {
+    opacity: 0;
+  }
+  .bottom-bar {
+    transform: rotate(-45deg);
+    transform-origin: 10% 90%;
+  }
+}
+
+.navbar-toggle.collapsed {
+  .top-bar {
+    transform: rotate(0);
+  }
+  .middle-bar {
+    opacity: 1;
+  }
+  .bottom-bar {
+    transform: rotate(0);
+  }
+}
+
+/*
+Navigation Breadcrumbs
+_____________________________________________
+*/
+
+.crumbs {
+  margin-top: 25px;
+  a {
+    font-family: $bodyFont;
+    color: #1f1f1f;
+    &:hover {
+      color: $primaryColor;
+    }
+  }
+  .sep {
+    margin: 0 2px;
+    color: #D9BA2E;
+  }
+  span:last-child {
+    font-family: $bodyFont;
+    color: #D9BA2E;
+  }
+}
+
+/*
+Hero Image Styling
+__________________________________________
+*/
+
+.front-hero {
+
+  position: relative;
+  padding-left: 0px;
+  padding-right: 0px;
+
+  img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  }
+
+  .front-image-overlay {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(0,0,0,.6);
+  }
+
+  .hero-text {
+    position: absolute;
+    font-family: $bodyFont;
+    left: 50%;
+    bottom: 250px;
+    transform: translateX(-50%);
+
+    h1 {
+      text-align: left;
+      color: $primaryColor;
+    }
+  }
+
+}
+
+@media (max-width: 736px){
+  .front-hero .hero-text {
+    bottom: 100px;
+  }
+}
+
+@media (max-width: 414px){
+  .front-hero .hero-text {
+    bottom: 150px;
+  }
+
+  .front-blog {
+    .sports-feed-format-gallery {
+       .entry-content {
+          .carousel {
+             .carousel-inner {
+                .background-image {
+                    height: 300px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+/*
+Front page body styling blog post formats
+__________________________________________________
+*/
+
+/* Common <a> tag css for all blog post formats */
+
+.entry-header {
+  h1 {
+    a {
+      font-family: $bodyFont;
+      font-weight: bold;
+      color: $primaryColor;
+    }
+  }
+  .entry-meta {
+    span {
+      a {
+        font-family: $bodyFont;
+        font-weight: bold;
+        color: $primaryColor;
+      }
+    }
+  }
+}
+
+/* Front page blog post formats styling */
+
+.front-blog {
+  .sports-feed-format-audio {
+    .entry-content {
+      iframe {
+        width: 100%;
+        height: 400px;
+      }
+    }
+  }
+  .sports-feed-format-gallery {
+    .entry-content {
+      .carousel {
+        .carousel-inner {
+          .background-image {
+            height: 400px;
+          }
+        }
+      }
+      .button-container {
+        display: none;
+      }
+    }
+  }
+  .sports-feed-format-link {
+    header {
+      position: relative;
+      padding-top: 60px;
+      padding-bottom: 60px;
+      background-color: $primaryColor;
+      h1 {
+        a {
+          color: white;
+          &:hover,
+          &:focus {
+            color: rgba(255,255,255,.6);
+          }
+        }
+      }
+    }
+  }
+  .sports-feed-format-quote {
+    header {
+      padding-top: 25px;
+      padding-bottom: 25px;
+      background-color: $primaryColor;
+      div {
+        div {
+          h2, h1 {
+            color: #fff;
+            font-style: italic;
+            margin: 0px;
+          }
+        }
+      }
+    }
+  }
+  .sports-feed-format-video {
+    .entry-content {
+      .entry-excerpt {
+        display: none;
+      }
+    }
+    .button-container {
+      display: none;
+    }
+  }
+  .sports-feed-format-image {
+    header {
+      position: relative;
+      height: 400px;
+
+      .entry-excerpt {
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        background-color: rgba(31,31,31,.5);
+        color: white;
+      }
+      .entry-meta {
+        color: #fff;
+      }
+    }
+  }
+  .sports-feed-format-aside {
+    div {
+      div {
+        padding-right: 0px;
+        .aside-featured {
+          width: 100%;
+          height: 200px;
+          object-fit: cover;
+        }
+      }
+      div {
+        .entry-content {
+          padding: 5px;
+          background-color: #fff;
+        }
+      }
+    }
+  }
+  .sports-feed-format-standard {
+    .entry-content {
+      background-color: #fff;
+      .entry-excerpt {
+        padding: 5px;
+      }
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    .button-container {
+        display: none;
+    }
+  }
+}
+
+
+/*
+Sidebar styling
+_______________________________________________
+*/
+
+.sidebar-button {
+  position: fixed;
+  left: auto;
+  top: 25%;
+  right: -15px;
+  transform: rotate( 90deg );
+  background-color: $primaryColor;
+  padding: 5px;
+  overflow-x: hidden;
+  z-index: 95;
+}
+
+.no-scroll {
+    overflow: hidden;}
+
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5;
+  display: none; }
+
+.sidebar-closed {
+  transform: translateX(100%); }
+
+  .sidebar-open {
+  color: #fff;
+  cursor: pointer;
+  transform: translateX(0);
+  &:hover,
+  &:focus {
+    color: #fff;
+  }
+}
+
+  .sports-feed-sidebar-container {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100vh;
+  padding-top: 40px; }
+
+.sidebar-close {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: #fff;
+  cursor: pointer; }
+  .sidebar-close:focus, .sidebar-close:hover {
+    color: $primaryColor; }
+
+.sidebar-scroll {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll; }
+
+article {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.entry-header {
+  background-color: #fff;
+  padding: 5px;
+}
+
+.entry-title {
+  margin: 0px;
+}
+
+.sports-feed-widget {
+
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+    #profile-picture-preview {
+      width: 150px;
+      height: 150px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin: 0 auto;
+      border-radius: 50%;
+    }
+
+    h1,
+    h2 {
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 32px;
+    }
+    h2 {
+      font-size: 28px;
+    }
+
+    .icon-wrapper {
+      text-align: center;
+    }
+}
+
+.sports-feed-sidebar {
+  position: fixed;
+  z-index: 9999;
+  width: 280px;
+  background-color: #1f1f1f;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  color: #f1f1f1;
+  padding: 10px;
+  height: 100vh;
+
+  .screen-reader-text {
+  display: none;
+  }
+
+  input#s {
+  background-color: #9896A4;
+  border: none;
+  @include animate(background-color, 500ms);
+  &:hover,
+  &:focus {
+    background-color: #fff;
+  }
+  }
+
+  .tagcloud > a {
+    background-color: #9896A4;
+    padding: 3px;
+    border-radius: 10px;
+    color: #f1f1f1;
+  }
+}
+
+.sidebar-scroll {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+  .widget-area {
+    .sports-feed-widget {
+      padding-left: 5px;
+      padding-right: 15px;
+      font-family: $bodyFont;
+
+      .icon-wrapper {
+        a {
+          color: #fff;
+          &:hover,
+          &:focus {
+            color: $primaryColor;
+          }
+        }
+      }
+
+      .sports-feed-widget-title {
+        background-color: rgba(67,192,246,.6);
+        border-radius: 10px;
+      }
+
+      ul {
+        li {
+          list-style: none;
+
+          a {
+            &:hover,
+            &:focus {
+              color: #fff;
+            }
+          }
+        }
+      }
+
+      form {
+        label {
+          input {
+          border: 2px solid #fff;
+          opacity: .8;
+          @include animate(opacity, 500ms);
+          &:hover,
+          &:focus {
+            opacity: 1;
+          }
+          }
+        }
+
+        input {
+          color: $primaryColor;
+          background-color: #fff;
+          border: none;
+          opacity: .8;
+          @include animate(opacity, 500ms);
+          &:hover,
+          &:focus {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+@media (max-width: 767px){
+  .entry-title {
+    font-size: 31px;
+  }
+}
+/*
+Index post formats styling
+_______________________________________________
+*/
+
+.page-wrapper {
+  margin-top: 100px;
+  margin-bottom: 45px;
+}
+
+.before-load-posts:nth-child(odd) {
+  
+}
+
+.index-posts {
+  .page-header {
+    font-family: $headerFont;
+    color: #D9BA2E;
+    border-bottom: 2px dashed #D9BA2E;
+  }
+  
+  article {
+    header {
+      .image-caption {
+        color: #fff;
+      }
+    }
+    .entry-content {
+      background-color: rgba(31,31,31,.7);
+      margin-top: 5px;
+      margin-bottom: 5px;
+      padding: 5px;
+      img {
+      width: 100%;
+      height: auto;
+      }
+
+      .entry-excerpt {
+        color: #fff;
+      }
+
+      .button-container {
+        padding-top: 15px;
+        padding-bottom: 10px;
+        a {
+        color: #fff;
+        background-color: $primaryColor;
+        border-color: transparent;
+        border-radius: 2px;
+        opacity: .8;
+        &:hover,
+        &:focus {
+          opacity: 1;
+          }
+        }
+      }
+
+      iframe {
+        width: 100%;
+        height: 150px;
+      }
+
+    }
+    .embed-responsive {
+      iframe {
+      width: 100%;
+      height: 100%;
+     }
+    }
+  }
+  .sports-feed-format-image {
+    header {
+      position: relative;
+      .entry-meta {
+        color: #fff;
+      }
+      .image-caption {
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        background-color: rgba(31,31,31,.6);
+        padding-top: 15px;
+        padding-bottom: 5px;
+      }
+    }
+  }
+  .sports-feed-format-aside {
+    .aside-container {
+      div {
+        div {
+          padding-right: 0px;
+          .aside-featured {
+            height: 175px;
+          }
+        }
+      }
+    }
+  }
+  .sports-feed-format-link {
+    header {
+      position: relative;
+      padding-top: 60px;
+      padding-bottom: 60px;
+      background-color: $primaryColor;
+      h1 {
+        a {
+          color: white;
+          &:hover,
+          &:focus {
+            color: rgba(255,255,255,.6);
+          }
+        }
+      }
+    }
+  }
+  .sports-feed-format-quote {
+    header {
+      padding-top: 25px;
+      padding-bottom: 25px;
+      background-color: $primaryColor;
+      div {
+        div {
+          h2, h1 {
+            color: #fff;
+            font-style: italic;
+            margin: 0px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.background-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 600px;
+}
+
+.entry-excerpt {
+  p {
+    font-family: $bodyFont;
+  }
+}
+
+@media (max-width: 767px){
+  .page-wrapper {
+    margin-top: 50px;
+    margin-bottom: 40px;
+  }
+  .background-image {
+    height: 400px;
+  }
+}
+
+/*
+Footer Styling
+________________________________________________
+*/
+
+footer {
+  
+  .container-fluid {
+    padding: 25px 0; 
+    background-color: #1f1f1f; 
+    overflow-x: hidden;
+    .row {
+      div {
+        .menu-footer-one-container {
+          text-align: right;
+          #menu-footer-one {
+            padding-left: 0px;
+            li {
+              line-height: 25px;
+              list-style: none;
+              a {
+                letter-spacing: 2px;
+                color: #fff;
+                &:hover,
+                &:focus {
+                  color: $primaryColor;
+                }
+              }
+            }
+            .current-menu-item {
+              a {
+                color: $primaryColor;
+              }
+            }
+          }
+        }
+        
+        .menu-footer-two-container {
+          padding-top: 50px;
+          #menu-footer-two {
+            padding-left: 0px;
+            li {
+              line-height: 25px;
+              list-style: none;
+              a {
+                letter-spacing: 2px;
+                color: #fff;
+                &:hover,
+                &:focus {
+                  color: $primaryColor;
+                }
+              }
+            }
+            .current-menu-item {
+              a {
+                color: $primaryColor;
+              }
+            }
+          }
+        }
+        
+      }
+    }
+  }
+  
+  .container-fluid:last-child {
+    background-color: #1f1f1f;
+    .copyright-footer {
+      color: #fff;
+      h5 {
+        line-height: 25px;
+      }
+    }
+    .text-center {
+      font-family: $bodyFont;
+      color: #fff;
+    }
+  }
+  
+}
+
+
+
+.load-button {
+  padding-bottom: 20px;
+}
+
+@media (max-width: 767px){
+    footer {
+
+    .container-fluid {
+
+      .row {
+        div {
+          .menu-footer-one-container {
+
+            #menu-footer-one {
+              padding-right: 15px;
+            }
+          }
+
+          .menu-footer-two-container {
+
+            #menu-footer-two {
+              padding-left: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/*
+SINGLE PAGE STYLING
+______________________________________________
+*/
+
+.post-link-nav-left > a,
+.post-link-nav-right > a {
+  color: #1f1f1f;
+  &:hover,
+  &:focus {
+    color: #fff;
+  }
+}
+.gallery-item {
+  display: inline-block;
+  margin: 5px;
+  background-color: #fff;
+}
+
+.gallery-caption {
+  padding: 2px;
+}
+
+#primary {
+  margin-top: 100px;
+  margin-bottom: 45px;
+  
+  main {
+    
+    .single-post {
+      article {
+        .entry-header {
+          color: $primaryColor;
+          background-color: transparent;
+          margin-bottom: 20px;
+        }
+        .entry-content {
+          p {
+            color: #1f1f1f;
+            line-height: 25px;
+            margin-bottom: 25px;
+            img {
+              width: 100%;
+              height: auto;
+            }
+            iframe {
+              width: 100%;
+              height: 600px;
+            }
+          }
+          p {
+            font-family: $bodyFont;
+            line-height: 25px;
+          }
+          img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+          }
+        }
+        .entry-footer {
+          p {
+            color: $primaryColor;
+            line-height: 25px;
+            a {
+              color: #fff;
+              background-color: rgba(31,31,31,.7);
+              padding: 2px 5px;
+              border-radius: 4px;
+              letter-spacing: 1px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.sports-feed-share-it {
+  ul {
+    padding-left: 0px;
+    li {
+      list-style: none;
+    }
+  }
+}
+
+@media (max-width: 767px){
+  #primary {
+    margin-top: 50px;
+    margin-bottom: 40px;
+  }
+}
+/*
+Comment Section Styling
+______________________________________________
+*/
+
+.comment-list {
+  li {
+    list-style: none;
+    background-color: rgba(31,31,31,.8);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px 15px;
+
+    article {
+      footer {
+        .comment-author {
+          background-color: #fff;
+          color: #1f1f1f;
+
+          img {
+            background-color: $primaryColor;
+            border-radius: 50%;
+            padding: 2px;
+          }
+        }
+      }
+
+      .comment-metadata {
+        display: none;
+      }
+
+      .comment-content {
+        color: #fff;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+
+      .reply {
+        a {
+          color: $primaryColor;
+          &:hover,
+          &:focus {
+            color: #fff;
+          }
+        }
+    }
+  }
+}
+}
+
+.children {
+  li {
+    list-style: none;
+    background-color: rgba(31,31,31,.6);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px 15px;
+
+    article {
+      footer {
+        .comment-author {
+          background-color: #fff;
+          color: #1f1f1f;
+
+          img {
+            background-color: $primaryColor;
+            border-radius: 50%;
+            padding: 2px;
+          }
+        }
+      }
+
+      .comment-metadata {
+        display: none;
+      }
+
+      .comment-content {
+        color: #fff;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+
+      .reply {
+        a {
+          color: $primaryColor;
+          &:hover,
+          &:focus {
+            color: #fff;
+          }
+        }
+    }
+  }
+}
+}
+
+#comments {
+
+  #respond {
+
+    #commentform {
+      font-family: $bodyFont;
+
+      .comment-form-comment {
+        label {
+          display: block;
+        }
+        textarea {
+          width: 100%;
+          border: 2px solid #fff;
+          opacity: .8;
+          @include animate(opacity, 500ms);
+          &:hover,
+          &:focus {
+            opacity: 1;
+          }
+        }
+      }
+
+        .comment-form-author,
+        .comment-form-email,
+        .comment-form-url {
+          label {
+            display: block;
+          }
+          input {
+            width: 25%;
+            border: 2px solid #fff;
+            opacity: .8;
+            @include animate(opacity, 500ms);
+            &:hover,
+            &:focus {
+              opacity: 1;
+            }
+          }
+        }
+
+        .form-submit {
+          input {
+            color: #fff;
+            background-color: $primaryColor;
+            border: 2px solid $primaryColor;
+            opacity: .8;
+            @include animate(opacity, 500ms);
+            &:hover,
+            &:focus {
+              opacity: 1;
+            }
+          }
+        }
+    }
+
+  }
+
+}
+
+/*
+Contact Form Styling
+_______________________________________________
+*/
+
+.form-container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.contact-title {
+  header {
+    h1 {
+    font-family: $bodyFont;
+    background-color: #fff;
+    border-top: 4px solid #fff;
+    border-bottom: 4px solid #fff;
+    border-right: 2px solid #fff;
+    border-left: 2px solid #fff;
+    color: $primaryColor;
+    }
+  }
+}
+
+.form-group {
+  input {
+    border: none;
+    box-shadow: none;
+    opacity: .8;
+    border-radius: 0px;
+    @include animate(opacity, 500ms);
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+  }
+
+  textarea {
+    border: none;
+    box-shadow: none;
+    opacity: .8;
+    border-radius: 0px;
+    @include animate(opacity, 500ms);
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+  }
+
+}
+
+form {
+
+  .formbutton {
+    color: $primaryColor;
+    border-color: transparent;
+    opacity: .8;
+    border-radius: 0px;
+    @include animate(opacity, 500ms);
+    &:hover,
+    &:focus {
+      background-color: #fff;
+      border-color: transparent;
+      color: $primaryColor;
+      opacity: 1;
+    }
+  }
+
+}
+
+.form-control-msg {
+    display: none;
+}
+
+.has-error {
+  .form-control-msg {
+    display: block;
+  }
+}
+
+.js-show-feedback {
+  display: block;
+}
+
+.error-wrapper {
+  position: relative;
+  width: 100%;
+  height: 75vh;
+  header {
+    h1 {
+      position: absolute;
+      top: 50%;
+      transform: translateY( -50% );
+      left: 0px;
+      font-family: $bodyFont;
+      color: $primaryColor;
+      background-color: #fff;
+      padding: 20px 10px;
+    }
+  }
+}
+
+/*
+Sorry no post message
+_____________________________________________
+*/
+
+.sorry-no-posts-message {
+  position: relative;
+  height: 50vh;
+  
+  p {
+    position: absolute;
+    display: inline-block;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50%, -50% );
+    font-family: $bodyFont;
+    color: $primaryColor;
+    background-color: #fff;
+    padding: 25px;
+  }
+  
+}
