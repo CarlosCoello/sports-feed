@@ -1,0 +1,949 @@
+/*
+Google Fonts
+___________________________________________________
+*/
+@font-face {
+  font-family: juliusOne;
+  src: url("fonts/JuliusSansOne-Regular.eot?") format("eot"), url("fonts/JuliusSansOne-Regular.woff") format("woff"), url("fonts/JuliusSansOne-Regular.ttf") format("truetype"); }
+@font-face {
+  font-family: raleway;
+  src: url("fonts/Raleway-Regular.eot?") format("eot"), url("fonts/Raleway-Regular.woff") format("woff"), url("fonts/Raleway-Regular.ttf") format("truetype"); }
+/*
+Font Variables
+_______________________________________________
+*/
+/*
+Color Variables
+*/
+/*
+Wordpress CSS
+___________________________________________________
+*/
+/* 
+WordPress Core
+--------------------------------------------------------------
+*/
+.alignnone {
+  margin: 5px 20px 20px 0; }
+
+.aligncenter,
+div.aligncenter {
+  display: block;
+  margin: 5px auto 5px auto; }
+
+.alignright {
+  float: right;
+  margin: 5px 0 20px 20px; }
+
+.alignleft {
+  float: left;
+  margin: 5px 20px 20px 0; }
+
+a img.alignright {
+  float: right;
+  margin: 5px 0 20px 20px; }
+
+a img.alignnone {
+  margin: 5px 20px 20px 0; }
+
+a img.alignleft {
+  float: left;
+  margin: 5px 20px 20px 0; }
+
+a img.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.wp-caption {
+  background: #fff;
+  border: 1px solid #f0f0f0;
+  max-width: 96%;
+  /* Image does not overflow the content area */
+  padding: 5px 3px 10px;
+  text-align: center; }
+
+.wp-caption.alignnone {
+  margin: 5px 20px 20px 0; }
+
+.wp-caption.alignleft {
+  margin: 5px 20px 20px 0; }
+
+.wp-caption.alignright {
+  margin: 5px 0 20px 20px; }
+
+.wp-caption img {
+  border: 0 none;
+  height: auto;
+  margin: 0;
+  max-width: 98.5%;
+  padding: 0;
+  width: auto; }
+
+.wp-caption p.wp-caption-text {
+  font-size: 11px;
+  line-height: 17px;
+  margin: 0;
+  padding: 0 4px 5px; }
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  white-space: nowrap;
+  height: 1px;
+  width: 1px;
+  overflow: hidden; }
+
+.screen-reader-text:focus {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  color: #21759b;
+  display: block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar. */ }
+
+/*
+Mixins
+___________________________________________________
+*/
+/*
+Mixins
+______________________________________
+*/
+body {
+  background-color: #e6e6e6; }
+
+/* specific targeted CSS */
+#about {
+  padding-left: 0px;
+  padding-right: 0px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 400px; }
+
+#load {
+  width: 200px;
+  font-family: juliusOne, Helvetica Neue;
+  color: white;
+  background-color: #36DBCA;
+  border-color: transparent; }
+
+.title-h1 h1 {
+  font-family: raleway, Garamond;
+  background-color: rgba(31, 31, 31, 0.9);
+  border-top: 4px solid black;
+  border-bottom: 4px solid black;
+  border-right: 2px solid black;
+  border-left: 2px solid black;
+  color: #f1f1f1; }
+
+.dashicons-format-quote:nth-child(2) {
+  transform: rotateY(180deg); }
+
+@media (max-width: 767px) {
+  .title-h1 h1 {
+    font-size: 31px; } }
+/*
+Navigation Header Nav
+_____________________________________________
+*/
+.navbar-default {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-color: #1f1f1f;
+  margin-bottom: 0px;
+  border-radius: 0px;
+  border-color: transparent;
+  box-shadow: 0px 5px 5px rgba(31, 31, 31, 0.8); }
+  .navbar-default .navbar-brand {
+    color: #43c0f6; }
+  .navbar-default .navbar-nav li a {
+    font-family: juliusOne, Helvetica Neue;
+    color: #fff; }
+    .navbar-default .navbar-nav li a:hover, .navbar-default .navbar-nav li a:focus {
+      color: #43c0f6; }
+  .navbar-default .navbar-nav li .dropdown-menu li a {
+    color: #1f1f1f !important;
+    opacity: .8; }
+    .navbar-default .navbar-nav li .dropdown-menu li a:hover, .navbar-default .navbar-nav li .dropdown-menu li a:focus {
+      color: #43c0f6 !important;
+      opacity: 1; }
+  .navbar-default .navbar-nav li .dropdown-menu .active a {
+    color: #43c0f6 !important; }
+  .navbar-default .navbar-nav .open a {
+    color: #43c0f6;
+    opacity: 8;
+    background-color: transparent; }
+    .navbar-default .navbar-nav .open a:hover, .navbar-default .navbar-nav .open a:focus {
+      color: #43c0f6;
+      opacity: 1; }
+  .navbar-default .navbar-nav .active a {
+    color: #43c0f6 !important;
+    background-color: transparent !important; }
+
+@media (max-width: 767px) {
+  .navbar-default {
+    padding-top: 0px;
+    padding-bottom: 0px; }
+
+  .navbar-nav .open .dropdown-menu {
+    background-color: #fff !important;
+    border-radius: 0px; }
+
+  .caret {
+    float: right;
+    margin-top: 8px; } }
+/* 
+Collapse Button Animation
+________________________________________________
+*/
+.navbar-toggle {
+  border: none;
+  background: transparent !important; }
+  .navbar-toggle:hover {
+    background: transparent !important; }
+  .navbar-toggle .icon-bar {
+    width: 22px;
+    transition: all 0.2s; }
+  .navbar-toggle .top-bar {
+    transform: rotate(45deg);
+    transform-origin: 10% 10%; }
+  .navbar-toggle .middle-bar {
+    opacity: 0; }
+  .navbar-toggle .bottom-bar {
+    transform: rotate(-45deg);
+    transform-origin: 10% 90%; }
+
+.navbar-toggle.collapsed .top-bar {
+  transform: rotate(0); }
+.navbar-toggle.collapsed .middle-bar {
+  opacity: 1; }
+.navbar-toggle.collapsed .bottom-bar {
+  transform: rotate(0); }
+
+/*
+Navigation Breadcrumbs
+_____________________________________________
+*/
+.crumbs {
+  margin-top: 25px; }
+  .crumbs a {
+    font-family: raleway, Garamond;
+    color: #1f1f1f; }
+    .crumbs a:hover {
+      color: #43c0f6; }
+  .crumbs .sep {
+    margin: 0 2px;
+    color: #D9BA2E; }
+  .crumbs span:last-child {
+    font-family: raleway, Garamond;
+    color: #D9BA2E; }
+
+/*
+Hero Image Styling
+__________________________________________
+*/
+.front-hero {
+  position: relative;
+  padding-left: 0px;
+  padding-right: 0px; }
+  .front-hero img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover; }
+  .front-hero .front-image-overlay {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.6); }
+  .front-hero .hero-text {
+    position: absolute;
+    font-family: raleway, Garamond;
+    left: 50%;
+    bottom: 250px;
+    transform: translateX(-50%); }
+    .front-hero .hero-text h1 {
+      text-align: left;
+      color: #43c0f6; }
+
+@media (max-width: 736px) {
+  .front-hero .hero-text {
+    bottom: 100px; } }
+@media (max-width: 414px) {
+  .front-hero .hero-text {
+    bottom: 150px; }
+
+  .front-blog .sports-feed-format-gallery .entry-content .carousel .carousel-inner .background-image {
+    height: 300px; } }
+/*
+Front page body styling blog post formats
+__________________________________________________
+*/
+/* Common <a> tag css for all blog post formats */
+.entry-header h1 a {
+  font-family: raleway, Garamond;
+  font-weight: bold;
+  color: #43c0f6; }
+.entry-header .entry-meta span a {
+  font-family: raleway, Garamond;
+  font-weight: bold;
+  color: #43c0f6; }
+
+/* Front page blog post formats styling */
+.front-blog .sports-feed-format-audio .entry-content iframe {
+  width: 100%;
+  height: 400px; }
+.front-blog .sports-feed-format-gallery .entry-content .carousel .carousel-inner .background-image {
+  height: 400px; }
+.front-blog .sports-feed-format-gallery .entry-content .button-container {
+  display: none; }
+.front-blog .sports-feed-format-link header {
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #43c0f6; }
+  .front-blog .sports-feed-format-link header h1 a {
+    color: white; }
+    .front-blog .sports-feed-format-link header h1 a:hover, .front-blog .sports-feed-format-link header h1 a:focus {
+      color: rgba(255, 255, 255, 0.6); }
+.front-blog .sports-feed-format-quote header {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-color: #43c0f6; }
+  .front-blog .sports-feed-format-quote header div div h2, .front-blog .sports-feed-format-quote header div div h1 {
+    color: #fff;
+    font-style: italic;
+    margin: 0px; }
+.front-blog .sports-feed-format-video .entry-content .entry-excerpt {
+  display: none; }
+.front-blog .sports-feed-format-video .button-container {
+  display: none; }
+.front-blog .sports-feed-format-image header {
+  position: relative;
+  height: 400px; }
+  .front-blog .sports-feed-format-image header .entry-excerpt {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    background-color: rgba(31, 31, 31, 0.5);
+    color: white; }
+  .front-blog .sports-feed-format-image header .entry-meta {
+    color: #fff; }
+.front-blog .sports-feed-format-aside div div {
+  padding-right: 0px; }
+  .front-blog .sports-feed-format-aside div div .aside-featured {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; }
+.front-blog .sports-feed-format-aside div div .entry-content {
+  padding: 5px;
+  background-color: #fff; }
+.front-blog .sports-feed-format-standard .entry-content {
+  background-color: #fff; }
+  .front-blog .sports-feed-format-standard .entry-content .entry-excerpt {
+    padding: 5px; }
+  .front-blog .sports-feed-format-standard .entry-content img {
+    width: 100%;
+    height: auto; }
+.front-blog .sports-feed-format-standard .button-container {
+  display: none; }
+
+/*
+Sidebar styling
+_______________________________________________
+*/
+.sidebar-button {
+  position: fixed;
+  left: auto;
+  top: 25%;
+  right: -15px;
+  transform: rotate(90deg);
+  background-color: #43c0f6;
+  padding: 5px;
+  overflow-x: hidden;
+  z-index: 95; }
+
+.no-scroll {
+  overflow: hidden; }
+
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5;
+  display: none; }
+
+.sidebar-closed {
+  transform: translateX(100%); }
+
+.sidebar-open {
+  color: #fff;
+  cursor: pointer;
+  transform: translateX(0); }
+  .sidebar-open:hover, .sidebar-open:focus {
+    color: #fff; }
+
+.sports-feed-sidebar-container {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100vh;
+  padding-top: 40px; }
+
+.sidebar-close {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: #fff;
+  cursor: pointer; }
+
+.sidebar-close:focus, .sidebar-close:hover {
+  color: #43c0f6; }
+
+.sidebar-scroll {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll; }
+
+article {
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
+.entry-header {
+  background-color: #fff;
+  padding: 5px; }
+
+.entry-title {
+  margin: 0px; }
+
+.sports-feed-widget {
+  padding-top: 20px;
+  padding-bottom: 20px; }
+  .sports-feed-widget #profile-picture-preview {
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    border-radius: 50%; }
+  .sports-feed-widget h1,
+  .sports-feed-widget h2 {
+    text-align: center; }
+  .sports-feed-widget h1 {
+    font-size: 32px; }
+  .sports-feed-widget h2 {
+    font-size: 28px; }
+  .sports-feed-widget .icon-wrapper {
+    text-align: center; }
+
+.sports-feed-sidebar {
+  position: fixed;
+  z-index: 9999;
+  width: 280px;
+  background-color: #1f1f1f;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  color: #f1f1f1;
+  padding: 10px;
+  height: 100vh; }
+  .sports-feed-sidebar .screen-reader-text {
+    display: none; }
+  .sports-feed-sidebar input#s {
+    background-color: #9896A4;
+    border: none;
+    -webkit-transition: background-color 500ms ease;
+    -moz-transition: background-color 500ms ease;
+    -ms-transition: background-color 500ms ease;
+    -o-transition: background-color 500ms ease;
+    transition: background-color 500ms ease; }
+    .sports-feed-sidebar input#s:hover, .sports-feed-sidebar input#s:focus {
+      background-color: #fff; }
+  .sports-feed-sidebar .tagcloud > a {
+    background-color: #9896A4;
+    padding: 3px;
+    border-radius: 10px;
+    color: #f1f1f1; }
+
+.sidebar-scroll {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll; }
+  .sidebar-scroll .widget-area .sports-feed-widget {
+    padding-left: 5px;
+    padding-right: 15px;
+    font-family: raleway, Garamond; }
+    .sidebar-scroll .widget-area .sports-feed-widget .icon-wrapper a {
+      color: #fff; }
+      .sidebar-scroll .widget-area .sports-feed-widget .icon-wrapper a:hover, .sidebar-scroll .widget-area .sports-feed-widget .icon-wrapper a:focus {
+        color: #43c0f6; }
+    .sidebar-scroll .widget-area .sports-feed-widget .sports-feed-widget-title {
+      background-color: rgba(67, 192, 246, 0.6);
+      border-radius: 10px; }
+    .sidebar-scroll .widget-area .sports-feed-widget ul li {
+      list-style: none; }
+      .sidebar-scroll .widget-area .sports-feed-widget ul li a:hover, .sidebar-scroll .widget-area .sports-feed-widget ul li a:focus {
+        color: #fff; }
+    .sidebar-scroll .widget-area .sports-feed-widget form label input {
+      border: 2px solid #fff;
+      opacity: .8;
+      -webkit-transition: opacity 500ms ease;
+      -moz-transition: opacity 500ms ease;
+      -ms-transition: opacity 500ms ease;
+      -o-transition: opacity 500ms ease;
+      transition: opacity 500ms ease; }
+      .sidebar-scroll .widget-area .sports-feed-widget form label input:hover, .sidebar-scroll .widget-area .sports-feed-widget form label input:focus {
+        opacity: 1; }
+    .sidebar-scroll .widget-area .sports-feed-widget form input {
+      color: #43c0f6;
+      background-color: #fff;
+      border: none;
+      opacity: .8;
+      -webkit-transition: opacity 500ms ease;
+      -moz-transition: opacity 500ms ease;
+      -ms-transition: opacity 500ms ease;
+      -o-transition: opacity 500ms ease;
+      transition: opacity 500ms ease; }
+      .sidebar-scroll .widget-area .sports-feed-widget form input:hover, .sidebar-scroll .widget-area .sports-feed-widget form input:focus {
+        opacity: 1; }
+
+@media (max-width: 767px) {
+  .entry-title {
+    font-size: 31px; } }
+/*
+Index post formats styling
+_______________________________________________
+*/
+.page-wrapper {
+  margin-top: 100px;
+  margin-bottom: 45px; }
+
+.index-posts .page-header {
+  font-family: juliusOne, Helvetica Neue;
+  color: #D9BA2E;
+  border-bottom: 2px dashed #D9BA2E; }
+.index-posts article header .image-caption {
+  color: #fff; }
+.index-posts article .entry-content {
+  background-color: rgba(31, 31, 31, 0.7);
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 5px; }
+  .index-posts article .entry-content img {
+    width: 100%;
+    height: auto; }
+  .index-posts article .entry-content .entry-excerpt {
+    color: #fff; }
+  .index-posts article .entry-content .button-container {
+    padding-top: 15px;
+    padding-bottom: 10px; }
+    .index-posts article .entry-content .button-container a {
+      color: #fff;
+      background-color: #43c0f6;
+      border-color: transparent;
+      border-radius: 2px;
+      opacity: .8; }
+      .index-posts article .entry-content .button-container a:hover, .index-posts article .entry-content .button-container a:focus {
+        opacity: 1; }
+  .index-posts article .entry-content iframe {
+    width: 100%;
+    height: 150px; }
+.index-posts article .embed-responsive iframe {
+  width: 100%;
+  height: 100%; }
+.index-posts .sports-feed-format-image header {
+  position: relative; }
+  .index-posts .sports-feed-format-image header .entry-meta {
+    color: #fff; }
+  .index-posts .sports-feed-format-image header .image-caption {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    background-color: rgba(31, 31, 31, 0.6);
+    padding-top: 15px;
+    padding-bottom: 5px; }
+.index-posts .sports-feed-format-aside .aside-container div div {
+  padding-right: 0px; }
+  .index-posts .sports-feed-format-aside .aside-container div div .aside-featured {
+    height: 175px; }
+.index-posts .sports-feed-format-link header {
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #43c0f6; }
+  .index-posts .sports-feed-format-link header h1 a {
+    color: white; }
+    .index-posts .sports-feed-format-link header h1 a:hover, .index-posts .sports-feed-format-link header h1 a:focus {
+      color: rgba(255, 255, 255, 0.6); }
+.index-posts .sports-feed-format-quote header {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-color: #43c0f6; }
+  .index-posts .sports-feed-format-quote header div div h2, .index-posts .sports-feed-format-quote header div div h1 {
+    color: #fff;
+    font-style: italic;
+    margin: 0px; }
+
+.background-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 600px; }
+
+.entry-excerpt p {
+  font-family: raleway, Garamond; }
+
+@media (max-width: 767px) {
+  .page-wrapper {
+    margin-top: 50px;
+    margin-bottom: 40px; }
+
+  .background-image {
+    height: 400px; } }
+/*
+Footer Styling
+________________________________________________
+*/
+footer .container-fluid {
+  padding: 25px 0;
+  background-color: #1f1f1f;
+  overflow-x: hidden; }
+  footer .container-fluid .row div .menu-footer-one-container {
+    text-align: right; }
+    footer .container-fluid .row div .menu-footer-one-container #menu-footer-one {
+      padding-left: 0px; }
+      footer .container-fluid .row div .menu-footer-one-container #menu-footer-one li {
+        line-height: 25px;
+        list-style: none; }
+        footer .container-fluid .row div .menu-footer-one-container #menu-footer-one li a {
+          letter-spacing: 2px;
+          color: #fff; }
+          footer .container-fluid .row div .menu-footer-one-container #menu-footer-one li a:hover, footer .container-fluid .row div .menu-footer-one-container #menu-footer-one li a:focus {
+            color: #43c0f6; }
+      footer .container-fluid .row div .menu-footer-one-container #menu-footer-one .current-menu-item a {
+        color: #43c0f6; }
+  footer .container-fluid .row div .menu-footer-two-container {
+    padding-top: 50px; }
+    footer .container-fluid .row div .menu-footer-two-container #menu-footer-two {
+      padding-left: 0px; }
+      footer .container-fluid .row div .menu-footer-two-container #menu-footer-two li {
+        line-height: 25px;
+        list-style: none; }
+        footer .container-fluid .row div .menu-footer-two-container #menu-footer-two li a {
+          letter-spacing: 2px;
+          color: #fff; }
+          footer .container-fluid .row div .menu-footer-two-container #menu-footer-two li a:hover, footer .container-fluid .row div .menu-footer-two-container #menu-footer-two li a:focus {
+            color: #43c0f6; }
+      footer .container-fluid .row div .menu-footer-two-container #menu-footer-two .current-menu-item a {
+        color: #43c0f6; }
+footer .container-fluid:last-child {
+  background-color: #1f1f1f; }
+  footer .container-fluid:last-child .copyright-footer {
+    color: #fff; }
+    footer .container-fluid:last-child .copyright-footer h5 {
+      line-height: 25px; }
+  footer .container-fluid:last-child .text-center {
+    font-family: raleway, Garamond;
+    color: #fff; }
+
+.load-button {
+  padding-bottom: 20px; }
+
+@media (max-width: 767px) {
+  footer .container-fluid .row div .menu-footer-one-container #menu-footer-one {
+    padding-right: 15px; }
+  footer .container-fluid .row div .menu-footer-two-container #menu-footer-two {
+    padding-left: 15px; } }
+/*
+SINGLE PAGE STYLING
+______________________________________________
+*/
+.post-link-nav-left > a,
+.post-link-nav-right > a {
+  color: #1f1f1f; }
+  .post-link-nav-left > a:hover, .post-link-nav-left > a:focus,
+  .post-link-nav-right > a:hover,
+  .post-link-nav-right > a:focus {
+    color: #fff; }
+
+.gallery-item {
+  display: inline-block;
+  margin: 5px;
+  background-color: #fff; }
+
+.gallery-caption {
+  padding: 2px; }
+
+#primary {
+  margin-top: 100px;
+  margin-bottom: 45px; }
+  #primary main .single-post article .entry-header {
+    color: #43c0f6;
+    background-color: transparent;
+    margin-bottom: 20px; }
+  #primary main .single-post article .entry-content p {
+    color: #1f1f1f;
+    line-height: 25px;
+    margin-bottom: 25px; }
+    #primary main .single-post article .entry-content p img {
+      width: 100%;
+      height: auto; }
+    #primary main .single-post article .entry-content p iframe {
+      width: 100%;
+      height: 600px; }
+  #primary main .single-post article .entry-content p {
+    font-family: raleway, Garamond;
+    line-height: 25px; }
+  #primary main .single-post article .entry-content img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px; }
+  #primary main .single-post article .entry-footer p {
+    color: #43c0f6;
+    line-height: 25px; }
+    #primary main .single-post article .entry-footer p a {
+      color: #fff;
+      background-color: rgba(31, 31, 31, 0.7);
+      padding: 2px 5px;
+      border-radius: 4px;
+      letter-spacing: 1px; }
+
+.sports-feed-share-it ul {
+  padding-left: 0px; }
+  .sports-feed-share-it ul li {
+    list-style: none; }
+
+@media (max-width: 767px) {
+  #primary {
+    margin-top: 50px;
+    margin-bottom: 40px; } }
+/*
+Comment Section Styling
+______________________________________________
+*/
+.comment-list li {
+  list-style: none;
+  background-color: rgba(31, 31, 31, 0.8);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px 15px; }
+  .comment-list li article footer .comment-author {
+    background-color: #fff;
+    color: #1f1f1f; }
+    .comment-list li article footer .comment-author img {
+      background-color: #43c0f6;
+      border-radius: 50%;
+      padding: 2px; }
+  .comment-list li article .comment-metadata {
+    display: none; }
+  .comment-list li article .comment-content {
+    color: #fff;
+    margin-top: 20px;
+    margin-bottom: 20px; }
+  .comment-list li article .reply a {
+    color: #43c0f6; }
+    .comment-list li article .reply a:hover, .comment-list li article .reply a:focus {
+      color: #fff; }
+
+.children li {
+  list-style: none;
+  background-color: rgba(31, 31, 31, 0.6);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px 15px; }
+  .children li article footer .comment-author {
+    background-color: #fff;
+    color: #1f1f1f; }
+    .children li article footer .comment-author img {
+      background-color: #43c0f6;
+      border-radius: 50%;
+      padding: 2px; }
+  .children li article .comment-metadata {
+    display: none; }
+  .children li article .comment-content {
+    color: #fff;
+    margin-top: 20px;
+    margin-bottom: 20px; }
+  .children li article .reply a {
+    color: #43c0f6; }
+    .children li article .reply a:hover, .children li article .reply a:focus {
+      color: #fff; }
+
+#comments #respond #commentform {
+  font-family: raleway, Garamond; }
+  #comments #respond #commentform .comment-form-comment label {
+    display: block; }
+  #comments #respond #commentform .comment-form-comment textarea {
+    width: 100%;
+    border: 2px solid #fff;
+    opacity: .8;
+    -webkit-transition: opacity 500ms ease;
+    -moz-transition: opacity 500ms ease;
+    -ms-transition: opacity 500ms ease;
+    -o-transition: opacity 500ms ease;
+    transition: opacity 500ms ease; }
+    #comments #respond #commentform .comment-form-comment textarea:hover, #comments #respond #commentform .comment-form-comment textarea:focus {
+      opacity: 1; }
+  #comments #respond #commentform .comment-form-author label,
+  #comments #respond #commentform .comment-form-email label,
+  #comments #respond #commentform .comment-form-url label {
+    display: block; }
+  #comments #respond #commentform .comment-form-author input,
+  #comments #respond #commentform .comment-form-email input,
+  #comments #respond #commentform .comment-form-url input {
+    width: 25%;
+    border: 2px solid #fff;
+    opacity: .8;
+    -webkit-transition: opacity 500ms ease;
+    -moz-transition: opacity 500ms ease;
+    -ms-transition: opacity 500ms ease;
+    -o-transition: opacity 500ms ease;
+    transition: opacity 500ms ease; }
+    #comments #respond #commentform .comment-form-author input:hover, #comments #respond #commentform .comment-form-author input:focus,
+    #comments #respond #commentform .comment-form-email input:hover,
+    #comments #respond #commentform .comment-form-email input:focus,
+    #comments #respond #commentform .comment-form-url input:hover,
+    #comments #respond #commentform .comment-form-url input:focus {
+      opacity: 1; }
+  #comments #respond #commentform .form-submit input {
+    color: #fff;
+    background-color: #43c0f6;
+    border: 2px solid #43c0f6;
+    opacity: .8;
+    -webkit-transition: opacity 500ms ease;
+    -moz-transition: opacity 500ms ease;
+    -ms-transition: opacity 500ms ease;
+    -o-transition: opacity 500ms ease;
+    transition: opacity 500ms ease; }
+    #comments #respond #commentform .form-submit input:hover, #comments #respond #commentform .form-submit input:focus {
+      opacity: 1; }
+
+/*
+Contact Form Styling
+_______________________________________________
+*/
+.form-container {
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
+.contact-title header h1 {
+  font-family: raleway, Garamond;
+  background-color: #fff;
+  border-top: 4px solid #fff;
+  border-bottom: 4px solid #fff;
+  border-right: 2px solid #fff;
+  border-left: 2px solid #fff;
+  color: #43c0f6; }
+
+.form-group input {
+  border: none;
+  box-shadow: none;
+  opacity: .8;
+  border-radius: 0px;
+  -webkit-transition: opacity 500ms ease;
+  -moz-transition: opacity 500ms ease;
+  -ms-transition: opacity 500ms ease;
+  -o-transition: opacity 500ms ease;
+  transition: opacity 500ms ease; }
+  .form-group input:hover, .form-group input:focus {
+    opacity: 1; }
+.form-group textarea {
+  border: none;
+  box-shadow: none;
+  opacity: .8;
+  border-radius: 0px;
+  -webkit-transition: opacity 500ms ease;
+  -moz-transition: opacity 500ms ease;
+  -ms-transition: opacity 500ms ease;
+  -o-transition: opacity 500ms ease;
+  transition: opacity 500ms ease; }
+  .form-group textarea:hover, .form-group textarea:focus {
+    opacity: 1; }
+
+form .formbutton {
+  color: #43c0f6;
+  border-color: transparent;
+  opacity: .8;
+  border-radius: 0px;
+  -webkit-transition: opacity 500ms ease;
+  -moz-transition: opacity 500ms ease;
+  -ms-transition: opacity 500ms ease;
+  -o-transition: opacity 500ms ease;
+  transition: opacity 500ms ease; }
+  form .formbutton:hover, form .formbutton:focus {
+    background-color: #fff;
+    border-color: transparent;
+    color: #43c0f6;
+    opacity: 1; }
+
+.form-control-msg {
+  display: none; }
+
+.has-error .form-control-msg {
+  display: block; }
+
+.js-show-feedback {
+  display: block; }
+
+.error-wrapper {
+  position: relative;
+  width: 100%;
+  height: 75vh; }
+  .error-wrapper header h1 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0px;
+    font-family: raleway, Garamond;
+    color: #43c0f6;
+    background-color: #fff;
+    padding: 20px 10px; }
+
+/*
+Sorry no post message
+_____________________________________________
+*/
+.sorry-no-posts-message {
+  position: relative;
+  height: 50vh; }
+  .sorry-no-posts-message p {
+    position: absolute;
+    display: inline-block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: raleway, Garamond;
+    color: #43c0f6;
+    background-color: #fff;
+    padding: 25px; }
+
+/*# sourceMappingURL=main.css.map */

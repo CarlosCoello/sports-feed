@@ -1,0 +1,37 @@
+.sports-feed-sidebar-preview, .sports-feed-general-form {
+    display: inline-block;
+    float: left;
+    margin-right: 20px;
+}
+
+.sports-feed-sidebar-preview {
+    width: 280px;
+    background-color: #1f1f1f;
+    padding: 20px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.sports-feed-sidebar {
+    display: block;
+    text-align: center;
+}
+
+h1.sports-feed-username, h2.sports-feed-description {
+    color: #ffffff;
+}
+
+h2.sports-feed-description {
+    font-size: 13px;
+    margin: 0 0 20px;
+}
+
+.profile-picture {
+    width: 200px;
+    height: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+    border-radius: 50%;
+}
